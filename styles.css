@@ -22,29 +22,84 @@
 
 :root {
     --primary-color: #5722CD;
-    --secondary-bg-color: #F3F6F9;
+    --header-bg-color: #4845E4;
     --secondary-color: #ED4385;
+    --secondary-bg-color: #F3F6F9;
     --primary-text-color: #0C0C0C;
     --secondary-text-color: #ffffff;
     --header-main-text-color: #F2F0FF;
     --service-tiles-text-color: #7A7A7A;
 }
 
-/*Blauw #4845E4;*/
+body {
+    margin: 0 20px;
+}
 
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
 body {
     font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    text-align: center;
 }
 
 h1, h2, h3 {
     font-family: "Merriweather", sans-serif;
 }
 
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 26px;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
+
+.outer-container {
+    /*container*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px dashed pink;
+}
+
+.inner-container {
+    /*item*/
+    flex-basis: 1200px;
+    border: 2px dashed blue;
+
+    /*container*/
+    display: flex;
+    flex-direction: column;
+}
+
+.outer-container__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px dashed pink;
+}
+
+.inner-container__main {
+    flex-basis: 1400px;
+    border: 2px dashed blue;
+}
+
 
 /* --------------- 3.1 Reusable ----------------------- */
 
@@ -54,6 +109,79 @@ h1, h2, h3 {
 
 /* --------------- 4.1 Header ------------------------- */
 
+nav {
+    /*item*/
+    flex-basis: 3rem;
+
+    /*container*/
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 2px dashed green;
+}
+
+.header-nav {
+    /*item*/
+    flex-basis: 24rem;
+
+    /*container*/
+    border: 2px dashed  purple;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    /*item*/
+    flex-basis: 36rem;
+
+    /*container*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content {
+    padding: 10rem;
+}
+
 /* --------------- 4.2 Introduction ------------------- */
+
+
+
+/*------------------4.3 Projects---------------------------*/
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-project-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section {
+    border: 2px dashed darkseagreen;
+}
+
+section article {
+    border: 2px dashed darkseagreen;
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.text-project-section {
+    flex-basis: 600px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
