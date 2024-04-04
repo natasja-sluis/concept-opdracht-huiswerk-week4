@@ -28,7 +28,7 @@
         <div class="header-content">
             <h1>Your website is an investment in the success of your business.</h1>
             <h2>We are here to help you succeed.</h2>
-            <button type="button">Let's work together</button>
+            <button type="button" class="button-header">Let's work together</button>
         </div>
     </div>
 </header>
@@ -36,24 +36,29 @@
 <main class="outer-container__main">
     <div class="inner-container__main">
         <section class="introduction-section">
-            <div>
+            <div class="introduction-text">
                 Rekupe is a digital agency in Los Angeles. We use strategic UX, SEO optimization and beautiful visual
                 designs to help your business grow. We see every project as a fresh opportunity, pushing ourselves to
-                create new digital experiences. Have a question? <a href="/">Click here</a> to contact us!
+                create new digital experiences. <div class="introduction-section-contact">Have a question? <a href="/">Click here</a> to contact us!</div>
             </div>
         </section>
         <section class="project-section">
             <div>
-                <article class="article-project-section">
+                <article class="article-project-section project-section-normal">
                     <div class="text-project-section">
-                        You know Rolling Stone. It’s the definitive voice in music, politics and culture. It’s a global
-                        icon.
+                        <p>
+                            You know Rolling Stone. It’s the definitive voice in music, politics and culture. It’s a
+                            global
+                            icon.
+                        </p>
                     </div>
                     <span class="image-wrapper">
                         <img src="./assets/work-image-01.jpeg" alt="Rolling Stones Magazine">
                     </span>
                 </article>
-                <article class="article-project-section">
+            </div>
+            <div>
+                <article class="article-project-section project-section-reverse">
                     <div class="text-project-section">
                         Variety is an industry leader for breaking entertainment news, reviews and box office results
                         with archive of content dating back to 1905.
@@ -62,6 +67,8 @@
                         <img src="./assets/work-image-02.jpeg" alt="Variety Magazine">
                     </span>
                 </article>
+            </div>
+            <div>
                 <article class="article-project-section">
                     <div class="text-project-section">
                         A global media platform connecting a community that embraces worth beyond wealth.
@@ -91,9 +98,7 @@
 </main>
 
 <footer class="outer-container">
-    <div class="inner-container">
-        <p>Lorem ipsum.</p>
-    </div>
+    <p>Lorem ipsum.</p>
 </footer>
 
 </body>

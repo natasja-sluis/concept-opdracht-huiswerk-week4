@@ -32,7 +32,7 @@
 }
 
 body {
-    margin: 0 20px;
+    max-width: 100vw;
 }
 
 li {
@@ -46,6 +46,22 @@ img {
 a {
     text-decoration: none;
     color: var(--primary-color);
+}
+
+button {
+    background-color: var(--secondary-color);
+    border-radius: 32px;
+    padding: 18px 48px;
+    margin-top: 26px;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- */
@@ -62,10 +78,12 @@ h1, h2, h3 {
 
 h1 {
     font-size: 32px;
+    font-weight: bold;
 }
 
 h2 {
-    font-size: 26px;
+    font-size: 22px;
+    margin: 5px;
 }
 
 /* ------------------------------- 3. Layout --------------------------------------- */
@@ -81,7 +99,6 @@ h2 {
 .inner-container {
     /*item*/
     flex-basis: 1200px;
-    border: 2px dashed blue;
 
     /*container*/
     display: flex;
@@ -97,9 +114,10 @@ h2 {
 
 .inner-container__main {
     flex-basis: 1400px;
+    display: flex;
+    flex-direction: column;
     border: 2px dashed blue;
 }
-
 
 /* --------------- 3.1 Reusable ----------------------- */
 
@@ -109,6 +127,12 @@ h2 {
 
 /* --------------- 4.1 Header ------------------------- */
 
+header {
+    background: rgb(72, 69, 228);
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 35%, rgba(87, 34, 205, 1) 100%);
+    color: var(--secondary-text-color);
+}
+
 nav {
     /*item*/
     flex-basis: 3rem;
@@ -117,7 +141,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    border: 2px dashed green;
+    padding: 10px;
 }
 
 .header-nav {
@@ -125,7 +149,6 @@ nav {
     flex-basis: 24rem;
 
     /*container*/
-    border: 2px dashed  purple;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -149,27 +172,44 @@ nav {
 
 /* --------------- 4.2 Introduction ------------------- */
 
+.introduction-section {
+    flex-basis: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
+.introduction-text {
+    flex-basis: 1200px;
+    padding: 10rem;
+}
+
+.introduction-section-contact {
+    margin-top: 30px;
+}
 
 /*------------------4.3 Projects---------------------------*/
 
 .project-section {
     display: flex;
     flex-direction: column;
+    gap: 3rem;
+    background-color: var(--secondary-bg-color);
 }
 
 .article-project-section {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-section {
-    border: 2px dashed darkseagreen;
+.project-section-normal {
+    flex-direction: row;
 }
 
-section article {
-    border: 2px dashed darkseagreen;
+.project-section-reverse {
+    flex-direction: row-reverse;
 }
 
 .image-wrapper {
@@ -179,9 +219,21 @@ section article {
 }
 
 .text-project-section {
-    flex-basis: 600px;
+    flex-basis: 400px;
     flex-grow: 0;
     flex-shrink: 1;
+}
+
+/*----------------------4.4 Services-----------------------*/
+
+/*------------------------4.5 Contact----------------------*/
+
+/*------------------------4.6 Footer-------------------------*/
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 16px;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
