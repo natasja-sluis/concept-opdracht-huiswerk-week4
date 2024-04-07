@@ -34,7 +34,7 @@
 }
 
 body {
-    max-width: 100vw;
+    max-width: 100vh;
 }
 
 li {
@@ -70,7 +70,7 @@ button:hover {
 
 body {
     font-family: "Roboto", sans-serif;
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
 }
 
@@ -79,13 +79,12 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: bold;
 }
 
 h2 {
-    font-size: 22px;
-    margin: 5px;
+    font-size: 28px;
 }
 
 /* ------------------------------- 3. Layout --------------------------------------- */
@@ -95,14 +94,10 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 2px dashed pink;
 }
 
 .inner-container {
-    /*item*/
     flex-basis: 1200px;
-
-    /*container*/
     display: flex;
     flex-direction: column;
 }
@@ -111,14 +106,12 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px dashed pink;
 }
 
 .inner-container__main {
     flex-basis: 1400px;
     display: flex;
     flex-direction: column;
-    border: 2px dashed blue;
 }
 
 .inner-container__footer {
@@ -141,21 +134,19 @@ header {
 }
 
 nav {
-    /*item*/
-    flex-basis: 3rem;
-
-    /*container*/
+    flex-basis: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     padding: 10px;
 }
 
-.header-nav {
-    /*item*/
-    flex-basis: 24rem;
+.nav-links {
+    color: white;
+}
 
-    /*container*/
+.header-nav {
+    flex-basis: 24rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -163,10 +154,7 @@ nav {
 }
 
 .header-content {
-    /*item*/
     flex-basis: 36rem;
-
-    /*container*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -175,6 +163,10 @@ nav {
 
 .header-content {
     padding: 10rem;
+}
+
+.squiggle-line-header {
+   height: 138px;
 }
 
 /* --------------- 4.2 Introduction ------------------- */
@@ -241,6 +233,10 @@ nav {
     gap: 1rem;
 }
 
+.squiggle-line-projects {
+    width: 50px;
+}
+
 /*----------------------4.4 Services-----------------------*/
 
 .services-section {
@@ -258,7 +254,7 @@ nav {
 
 .service-tiles {
     border: 2px solid var(--primary-color);
-    flex-basis: 380px;
+    flex-basis: 420px;
     padding: 2rem;
     text-align: left;
     color: var(--service-tiles-text-color);
@@ -271,10 +267,12 @@ nav {
 
 .service-tiles h2 {
     color: var(--primary-color);
+    padding: 1rem 0rem;
 }
 
 .logo-wrapper {
     width: 80px;
+    padding: 0.5rem;
 }
 
 /*------------------------4.5 Contact----------------------*/
@@ -288,16 +286,44 @@ nav {
 }
 
 .contact-section-wrapper {
-    border: 2px dashed rebeccapurple;
-    flex-basis: 500px;
+    flex-basis: 1200px;
     padding: 5rem;
+}
 
+.header-contact-section {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.text-contact-section {
+    padding: 1rem;
 }
 
 .contact-form {
-    flex-basis: 10rem;
-    display: flex;
-    flex-direction: column;
+padding: 2rem;
+}
+
+input {
+ width: 100%;
+}
+
+#contact-name, #contact-email, #contact-message {
+    padding: 1rem;
+}
+
+#contact-message {
+    width: 100%;
+    height: 15rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+.contact-button {
+    width: 22rem;
+}
+
+::placeholder {
+    font-size: 1rem;
 }
 
 /*------------------------4.6 Footer-------------------------*/
