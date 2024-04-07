@@ -34,7 +34,7 @@
 }
 
 body {
-    max-width: 100vh;
+    max-width: 100vw;
 }
 
 li {
@@ -90,7 +90,6 @@ h2 {
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 .outer-container {
-    /*container*/
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -100,6 +99,7 @@ h2 {
     flex-basis: 1200px;
     display: flex;
     flex-direction: column;
+    gap: 4rem;
 }
 
 .outer-container__main {
@@ -109,7 +109,7 @@ h2 {
 }
 
 .inner-container__main {
-    flex-basis: 1400px;
+    flex-basis: 1200px;
     display: flex;
     flex-direction: column;
 }
@@ -131,14 +131,15 @@ header {
     background: rgb(72, 69, 228);
     background: var(--background-gradient);
     color: var(--secondary-text-color);
+
 }
 
 nav {
-    flex-basis: 100%;
+    flex-basis: 4rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding: 10px;
+    padding: 0.5rem;
 }
 
 .nav-links {
@@ -151,6 +152,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-grow: 0;
 }
 
 .header-content {
@@ -159,10 +161,8 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.header-content {
-    padding: 10rem;
+    flex-grow: 1;
+    padding: 4rem;
 }
 
 .squiggle-line-header {
@@ -172,7 +172,6 @@ nav {
 /* --------------- 4.2 Introduction ------------------- */
 
 .introduction-section {
-    flex-basis: 36rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -180,7 +179,7 @@ nav {
 
 .introduction-text-wrapper {
     flex-basis: 1200px;
-    padding: 10rem;
+    padding: 4rem;
     font-size: 2rem;
     color: var(--primary-color);
     font-weight: 500;
@@ -243,6 +242,8 @@ nav {
     display: flex;
     flex-direction: row;
     padding: 5rem;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .article-services-section {
@@ -287,7 +288,7 @@ nav {
 
 .contact-section-wrapper {
     flex-basis: 1200px;
-    padding: 5rem;
+    padding: 2rem 0;
 }
 
 .header-contact-section {
@@ -300,7 +301,15 @@ nav {
 }
 
 .contact-form {
-padding: 2rem;
+    padding: 2rem;
+}
+
+.contact-form > label {
+    display: block;
+    padding-top: 2rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-align: left;
 }
 
 input {
@@ -319,7 +328,8 @@ input {
 }
 
 .contact-button {
-    width: 22rem;
+    width: 12rem;
+
 }
 
 ::placeholder {
@@ -331,8 +341,58 @@ input {
 .footer {
     background-color: black;
     color: var(--service-tiles-text-color);
-    padding: 16px;
+    padding: 1rem;
     font-size: 0.8rem;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 567px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 1rem;
+    }
+
+    /*110vh because better scrolling experience*/
+    .outer-container {
+        height: 110vh;
+    }
+    .inner-container {
+    gap: 0;
+    }
+    .header-content {
+        padding: 0 1rem;
+    }
+
+    .introduction-text-wrapper {
+        font-size: 1.5rem;
+    }
+
+    .article-project-section {
+        flex-direction: column-reverse;
+    }
+
+    .article-project-section:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .image-wrapper, .text-project-section {
+        flex-basis: auto;
+    }
+
+    .services-section {
+        padding: 2rem;
+    }
+}
